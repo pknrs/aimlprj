@@ -1,10 +1,9 @@
-
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Layout = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-dvh grid grid-rows-[auto_1fr_auto]">
       <Navbar />
       <main className="container mx-auto p-4">
         <Outlet />
