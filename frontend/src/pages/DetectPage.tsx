@@ -1,9 +1,8 @@
-
-import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
+import { useState } from "react";
 
 const DetectPage = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -51,23 +50,33 @@ const DetectPage = () => {
   };
 
   return (
-    <Card className="max-w-xl mx-auto">
-      <CardHeader>
-        <CardTitle>Detect Image</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <Input type="file" onChange={handleFileChange} />
-        <Button onClick={handleDetect} disabled={!file || loading} className="mt-4">
-          Detect
-        </Button>
-        {loading && <Progress value={progress} className="mt-4" />}
-        {annotatedImage && (
-          <div className="mt-4">
-            <img src={annotatedImage} alt="Annotated" className="max-w-full h-auto" />
-          </div>
-        )}
-      </CardContent>
-    </Card>
+    <>
+      <Card className="max-w-xl mx-auto">
+        <CardHeader>
+          <CardTitle>Detect Image</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Input type="file" onChange={handleFileChange} />
+          <Button
+            onClick={handleDetect}
+            disabled={!file || loading}
+            className="mt-4 mx-auto block"
+          >
+            Detect
+          </Button>
+          {loading && <Progress value={progress} className="mt-4" />}
+          {annotatedImage && (
+            <div className="mt-4">
+              <img
+                src={annotatedImage}
+                alt="Annotated"
+                className="max-w-full h-auto"
+              />
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    </>
   );
 };
 

@@ -8,7 +8,7 @@ const Layout = () => {
       <main className="container mx-auto p-4">
         <Outlet />
       </main>
-      <footer className="text-center p-4 border-t border-gray-700">
+      <footer className="text-center p-4 border-t border-gray-700 bg-gray-900">
         © 2024 Pehchan Kaun?
       </footer>
     </div>
