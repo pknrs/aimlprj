@@ -8,8 +8,11 @@ const Navbar = () => {
           Pehchan Kaun?
         </Link>
         <div className="space-x-4">
-          <Link to="/detect" className="hover:text-gray-400">
+          <Link to="/detect-image" className="hover:text-gray-400">
             Detect Image
+          </Link>
+          <Link to="/detect-video" className="hover:text-gray-400">
+            Detect Video
           </Link>
           <Link to="/train" className="hover:text-gray-400">
             Train Image

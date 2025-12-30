@@ -1,8 +1,7 @@
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
+import DetectImagePage from "./pages/DetectImagePage";
 import Home from "./pages/Home";
-import DetectPage from "./pages/DetectPage";
 
 function App() {
   return (
@@ -10,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="detect" element={<DetectPage />} />
+          <Route path="detect-image" element={<DetectImagePage />} />
           <Route path="train" element={<div>Coming Soon</div>} />
         </Route>
       </Routes>

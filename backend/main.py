@@ -21,7 +21,7 @@ app.add_middleware(
 model = YOLO("yolov8n.pt")
 
 
-@app.post("/detect")
+@app.post("/detect-image")
 async def detect(file: UploadFile = File(...)):
     # Read the image file
     contents = await file.read()

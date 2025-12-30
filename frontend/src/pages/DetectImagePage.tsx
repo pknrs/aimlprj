@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 import { useEffect, useRef, useState } from "react";
 
-const DetectPage = () => {
+const DetectImagePage = () => {
   const [file, setFile] = useState<File | null>(null);
   const [annotatedImage, setAnnotatedImage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -121,7 +121,7 @@ const DetectPage = () => {
     formData.append("file", file);
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost:8000/detect", true);
+    xhr.open("POST", "http://localhost:8000/detect-image", true);
 
     xhr.upload.onprogress = (event) => {
       if (event.lengthComputable) {
@@ -239,4 +239,4 @@ const DetectPage = () => {
   );
 };
 
-export default DetectPage;
+export default DetectImagePage;

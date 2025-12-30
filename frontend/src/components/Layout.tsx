@@ -9,7 +9,7 @@ const Layout = () => {
         <Outlet />
       </main>
       <footer className="text-center p-4 border-t border-gray-700 bg-gray-900">
-        © 2024 Pehchan Kaun?
+        © 2026 Pehchan Kaun?
       </footer>
     </div>
   );
